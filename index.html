@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worksheet 2 · Lock It and Show It</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#1d2433;--muted:#5a6478;--line:#d5d9e4;--accent:#3b5bdb;--accent-soft:#e7ecff;--bronze:#b9722b;--silver:#6b7686;--gold:#c79a00;--input:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--text:#e8ebf2;--muted:#a0a9bb;--line:#333a48;--accent:#8ea5ff;--accent-soft:#252e4d;--bronze:#e0974f;--silver:#a3adbd;--gold:#e8c23a;--input:#141820}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 48px}
+.idrow{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.idrow label{flex:1 1 180px;font-size:.9rem;color:var(--muted)}
+input[type=text],textarea,input[type=number],select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--text);font:inherit}
+textarea{min-height:84px;resize:vertical}
+h1{margin:.2em 0 .1em;font-size:1.7rem}
+.sub{color:var(--muted);font-style:italic;margin:0 0 16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+h2{font-size:1.15rem;margin:0 0 10px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.badge{font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:99px;border:1.5px solid currentColor;text-transform:uppercase;letter-spacing:.04em}
+.bronze{color:var(--bronze)}.silver{color:var(--silver)}.gold{color:var(--gold)}.other{color:var(--accent)}
+ul.can{margin:6px 0 0;padding-left:20px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+td.c,th.c{text-align:center;width:1%;white-space:nowrap}
+input[type=checkbox],input[type=radio]{width:20px;height:20px;accent-color:var(--accent)}
+td input[type=number]{width:80px}
+p.q{margin:.4em 0}
+.inline label{margin-right:14px;white-space:nowrap}
+.safety{font-weight:600}
+.btns{display:flex;gap:10px;margin-top:20px}
+button{padding:10px 18px;border-radius:10px;border:1px solid var(--accent);background:var(--accent);color:#fff;font:inherit;cursor:pointer}
+button.alt{background:transparent;color:var(--accent)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:24px}
+@media print{body{background:#fff;color:#000}.btns{display:none}section{break-inside:avoid;border-color:#999}:root{--card:#fff;--text:#000;--input:#fff;--line:#999}}
+</style>
+</head>
+<body>
+<main>
+<div class="idrow">
+  <label>Name<input type="text"></label>
+  <label>Class<input type="text"></label>
+  <label>Date<input type="text"></label>
+</div>
+
+<h1>Worksheet 2 · Lock It and Show It</h1>
+<p class="sub">Session 2 · Week 9 Lab · About 45 minutes. Lock your final version and show the checks, not just the answer.</p>
+
+<section>
+  <h2>I can…</h2>
+  <ul class="can">
+    <li>run one final iteration and choose the version I will show.</li>
+    <li>rehearse my demo and explain each step of my solution and its checks clearly.</li>
+    <li>justify that my solution is trustworthy and low-risk using the checks I ran.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>A · Lock it or leave it? <span class="badge bronze">Bronze</span></h2>
+  <p class="q">Five minutes before the showcase, tick one box for each move.</p>
+  <div class="tw"><table>
+    <tr><th>Move</th><th class="c">Safe to lock in</th><th class="c">Untested risk</th></tr>
+    <tr><td>Confirm it still meets every criterion</td><td class="c"><input type="radio" name="a1" aria-label="Safe"></td><td class="c"><input type="radio" name="a1" aria-label="Risk"></td></tr>
+    <tr><td>Add one more feature to look more impressive</td><td class="c"><input type="radio" name="a2" aria-label="Safe"></td><td class="c"><input type="radio" name="a2" aria-label="Risk"></td></tr>
+    <tr><td>Pick the output you can reproduce</td><td class="c"><input type="radio" name="a3" aria-label="Safe"></td><td class="c"><input type="radio" name="a3" aria-label="Risk"></td></tr>
+    <tr><td>Change the prompt wording without re-testing</td><td class="c"><input type="radio" name="a4" aria-label="Safe"></td><td class="c"><input type="radio" name="a4" aria-label="Risk"></td></tr>
+    <tr><td>Agree with your partner not to touch it again</td><td class="c"><input type="radio" name="a5" aria-label="Safe"></td><td class="c"><input type="radio" name="a5" aria-label="Risk"></td></tr>
+    <tr><td>Swap in new data nobody has tested</td><td class="c"><input type="radio" name="a6" aria-label="Safe"></td><td class="c"><input type="radio" name="a6" aria-label="Risk"></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>B · Order the demo spine <span class="badge bronze">Bronze</span></h2>
+  <p class="q">Number the five demo lines 1–5 in the order a clear presenter says them.</p>
+  <div class="tw"><table>
+    <tr><th>Demo line</th><th class="c">Order</th></tr>
+    <tr><td>The output: what comes out</td><td class="c"><input type="number" min="1" max="5" aria-label="Order"></td></tr>
+    <tr><td>One check I ran</td><td class="c"><input type="number" min="1" max="5" aria-label="Order"></td></tr>
+    <tr><td>The task: what it does</td><td class="c"><input type="number" min="1" max="5" aria-label="Order"></td></tr>
+    <tr><td>The process step: what happens</td><td class="c"><input type="number" min="1" max="5" aria-label="Order"></td></tr>
+    <tr><td>The input: what goes in</td><td class="c"><input type="number" min="1" max="5" aria-label="Order"></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>C · My five-sentence demo <span class="badge silver">Silver</span></h2>
+  <p class="q">Write one sentence for each part. Aim for under a minute.</p>
+  <div class="tw"><table>
+    <tr><th>Part</th><th>My sentence</th></tr>
+    <tr><th>Task</th><td><textarea aria-label="Task"></textarea></td></tr>
+    <tr><th>Input</th><td><textarea aria-label="Input"></textarea></td></tr>
+    <tr><th>Process</th><td><textarea aria-label="Process"></textarea></td></tr>
+    <tr><th>Output</th><td><textarea aria-label="Output"></textarea></td></tr>
+    <tr><th>One check I ran</th><td><textarea aria-label="One check I ran"></textarea></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>D · Version-lock <span class="badge silver">Silver</span></h2>
+  <p class="q">Record the version you will show and why you chose it. Can you reproduce it?
+    <span class="inline"><label><input type="radio" name="repro"> Yes</label><label><input type="radio" name="repro"> No</label></span></p>
+  <textarea aria-label="Version and reason"></textarea>
+</section>
+
+<section>
+  <h2>E · Accuracy: before vs after <span class="badge silver">Silver</span></h2>
+  <p class="q">Run the 10-input test-set. Count the correct outputs before and after your ONE improvement. Accuracy % = correct ÷ 10 × 100.</p>
+  <div class="tw"><table>
+    <tr><th></th><th>Correct / 10</th><th>Accuracy %</th><th>Notes</th></tr>
+    <tr><th>Before</th><td><input type="number" min="0" max="10" id="b" aria-label="Before correct"></td><td id="bp">—</td><td><input type="text" aria-label="Before notes"></td></tr>
+    <tr><th>After</th><td><input type="number" min="0" max="10" id="a" aria-label="After correct"></td><td id="ap">—</td><td><input type="text" aria-label="After notes"></td></tr>
+  </table></div>
+  <p class="q">The two weakest cases and the limitation behind them:</p>
+  <textarea aria-label="Weakest cases"></textarea>
+  <p class="q">The ONE improvement I made (cleaner examples, or an added check):</p>
+  <textarea aria-label="Improvement"></textarea>
+</section>
+
+<section>
+  <h2>F · Rehearsal feedback <span class="badge silver">Silver</span></h2>
+  <p class="q">After each rehearsal, your partner notes one glow (worked) and one grow (fix).</p>
+  <div class="tw"><table>
+    <tr><th>Rehearsal</th><th>Glow (worked)</th><th>Grow (fix)</th></tr>
+    <tr><td>1</td><td><textarea aria-label="Glow 1"></textarea></td><td><textarea aria-label="Grow 1"></textarea></td></tr>
+    <tr><td>2</td><td><textarea aria-label="Glow 2"></textarea></td><td><textarea aria-label="Grow 2"></textarea></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>G · What counts as justification? <span class="badge gold">Gold</span></h2>
+  <p class="q">Tick the THREE things that actually justify a trustworthy, low-risk solution.</p>
+  <div class="tw"><table>
+    <tr><th>Statement</th><th class="c">Justifies</th></tr>
+    <tr><td>I verified the output against a trusted source.</td><td class="c"><input type="checkbox" aria-label="Justifies"></td></tr>
+    <tr><td>My risk check named who could be affected and how I would catch a mistake.</td><td class="c"><input type="checkbox" aria-label="Justifies"></td></tr>
+    <tr><td>“It works.”</td><td class="c"><input type="checkbox" aria-label="Justifies"></td></tr>
+    <tr><td>It sounds completely sure.</td><td class="c"><input type="checkbox" aria-label="Justifies"></td></tr>
+    <tr><td>My test-set shows the before and after accuracy.</td><td class="c"><input type="checkbox" aria-label="Justifies"></td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>H · Tool log — Teachable Machine retrain + packs <span class="badge other">Optional (teacher-run)</span></h2>
+  <div class="tw"><table>
+    <tr><th class="c">Step</th><th>What I did</th><th>What I saw / result</th></tr>
+    <tr><td class="c">1</td><td>Ran the solution across the 10-input test-set and counted correct outputs</td><td><textarea aria-label="Result 1"></textarea></td></tr>
+    <tr><td class="c">2</td><td>Named the two weakest cases and the limitation</td><td><textarea aria-label="Result 2"></textarea></td></tr>
+    <tr><td class="c">3</td><td>Improved one thing (cleaner examples or an added check)</td><td><textarea aria-label="Result 3"></textarea></td></tr>
+    <tr><td class="c">4</td><td>Re-ran the full test-set and counted correct again</td><td><textarea aria-label="Result 4"></textarea></td></tr>
+    <tr><td class="c">5</td><td>Recorded before and after accuracy; checked no personal data</td><td><textarea aria-label="Result 5"></textarea></td></tr>
+  </table></div>
+  <p class="safety"><label><input type="checkbox"> Safety check: I used no personal data (no faces, voices or names).</label></p>
+</section>
+
+<section>
+  <h2>Exit ticket <span class="badge other">Everyone</span></h2>
+  <p class="q">In one sentence, justify why your solution is trustworthy and low-risk, naming the two checks you ran.</p>
+  <textarea aria-label="Exit ticket"></textarea>
+</section>
+
+<section>
+  <h2>Challenge <span class="badge other">Stretch</span></h2>
+  <p class="q">Prepare a 20-second answer to the tough question “How do you know your AI output is not misleading anyone?” Cite your accuracy check and your risk check by name, and state which performance criterion each one measures.</p>
+  <textarea aria-label="Challenge answer"></textarea>
+</section>
+
+<section>
+  <p class="safety inline">How sure am I?
+    <label><input type="radio" name="sure"> Green (I can teach it)</label>
+    <label><input type="radio" name="sure"> Amber (nearly)</label>
+    <label><input type="radio" name="sure"> Red (I need help)</label>
+  </p>
+</section>
+
+<div class="btns">
+  <button onclick="window.print()">Print worksheet</button>
+  <button class="alt" onclick="if(confirm('Clear everything?'))location.reload()">Clear</button>
+</div>
+
+<footer>AI Literacy · Grade 8 · Term 1 · Weeks 9–10 · Student worksheets · Page 1</footer>
+</main>
+<script>
+function pct(inp,out){
+  var v=parseInt(inp.value,10);
+  out.textContent=(isNaN(v)||v<0||v>10)?'—':(v/10*100)+'%';
+}
+var b=document.getElementById('b'),a=document.getElementById('a');
+b.addEventListener('input',function(){pct(b,document.getElementById('bp'))});
+a.addEventListener('input',function(){pct(a,document.getElementById('ap'))});
+</script>
+</body>
+</html>
